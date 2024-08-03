@@ -5,3 +5,7 @@ class Category(models.Model):
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     deleted_at = models.DateTimeField(null=True, blank=True)
+    
+    def __str__(self):
+        return self.name
+    
